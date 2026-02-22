@@ -1,8 +1,8 @@
 """
-Custom Actions para o Bot de Onboarding da Totoslente.
+Custom Actions para o Bot de Onboarding da The100s.
 
 Implementa todas as ações personalizadas necessárias para o processo de onboarding
-dos novos colaboradores da Totoslente.
+dos novos colaboradores da The100s.
 """
 
 import logging
@@ -22,7 +22,7 @@ QUIZ_PERGUNTAS = [
     {
         "id": 1,
         "pergunta": (
-            "❓ **Pergunta 1/3:** Qual é a missão da Totoslente?\n\n"
+            "❓ **Pergunta 1/3:** Qual é a missão da The100s?\n\n"
             "A) Ser a maior empresa do mundo\n"
             "B) Proporcionar soluções de qualidade superior, mantendo um ambiente positivo e inclusivo\n"
             "C) Maximizar o lucro a qualquer custo\n"
@@ -30,14 +30,14 @@ QUIZ_PERGUNTAS = [
         ),
         "resposta_correta": "b",
         "explicacao": (
-            "✅ A missão da Totoslente é proporcionar soluções de qualidade superior "
+            "✅ A missão da The100s é proporcionar soluções de qualidade superior "
             "aos nossos clientes, mantendo um ambiente de trabalho positivo e inclusivo."
         ),
     },
     {
         "id": 2,
         "pergunta": (
-            "❓ **Pergunta 2/3:** Qual dos seguintes NÃO é um valor da Totoslente?\n\n"
+            "❓ **Pergunta 2/3:** Qual dos seguintes NÃO é um valor da The100s?\n\n"
             "A) Integridade\n"
             "B) Competição interna\n"
             "C) Inovação\n"
@@ -45,14 +45,14 @@ QUIZ_PERGUNTAS = [
         ),
         "resposta_correta": "b",
         "explicacao": (
-            "✅ Os valores da Totoslente são: Integridade, Inovação, Excelência, "
+            "✅ Os valores da The100s são: Integridade, Inovação, Excelência, "
             "Trabalho em Equipa e Respeito. A 'Competição interna' não faz parte dos nossos valores."
         ),
     },
     {
         "id": 3,
         "pergunta": (
-            "❓ **Pergunta 3/3:** Quantos dias úteis de férias tem um colaborador da Totoslente por ano?\n\n"
+            "❓ **Pergunta 3/3:** Quantos dias úteis de férias tem um colaborador da The100s por ano?\n\n"
             "A) 20 dias\n"
             "B) 25 dias\n"
             "C) 22 dias\n"
@@ -60,7 +60,7 @@ QUIZ_PERGUNTAS = [
         ),
         "resposta_correta": "c",
         "explicacao": (
-            "✅ Os colaboradores da Totoslente têm direito a 22 dias úteis de férias "
+            "✅ Os colaboradores da The100s têm direito a 22 dias úteis de férias "
             "por ano, conforme a legislação laboral portuguesa."
         ),
     },
@@ -93,7 +93,7 @@ class ActionBoasVindasPersonalizada(Action):
         nome = _obter_nome_formatado(tracker)
 
         mensagem = (
-            f"👋 Olá{nome}! Bem-vindo(a) à **Totoslente**!\n\n"
+            f"👋 Olá{nome}! Bem-vindo(a) à **The100s**!\n\n"
             "Sou o seu assistente virtual de onboarding e estou aqui para o/a ajudar "
             "a integrar-se na nossa equipa. 🎉\n\n"
             "**As etapas do seu onboarding são:**\n\n"
@@ -133,15 +133,15 @@ class ActionEnviarDocumentos(Action):
         mensagem = (
             f"📄 Claro{nome}! Aqui estão os documentos essenciais para o seu onboarding:\n\n"
             "1. 📋 **Manual do Colaborador**\n"
-            "   👉 [Aceder ao Manual](https://totoslente.sharepoint.com/manual-colaborador)\n\n"
+            "   👉 [Aceder ao Manual](https://the100s.sharepoint.com/manual-colaborador)\n\n"
             "2. ⚖️ **Código de Conduta**\n"
-            "   👉 [Aceder ao Código de Conduta](https://totoslente.sharepoint.com/codigo-conduta)\n\n"
+            "   👉 [Aceder ao Código de Conduta](https://the100s.sharepoint.com/codigo-conduta)\n\n"
             "3. 📝 **Contrato de Trabalho**\n"
             "   📧 Enviado para o seu email pessoal — verifique a sua caixa de entrada\n\n"
             "4. 🔒 **Política de Privacidade e RGPD**\n"
-            "   👉 [Aceder à Política](https://totoslente.sharepoint.com/politica-privacidade)\n\n"
+            "   👉 [Aceder à Política](https://the100s.sharepoint.com/politica-privacidade)\n\n"
             "5. 🖥️ **Política de Uso de TI**\n"
-            "   👉 [Aceder à Política TI](https://totoslente.sharepoint.com/politica-ti)\n\n"
+            "   👉 [Aceder à Política TI](https://the100s.sharepoint.com/politica-ti)\n\n"
             "⚠️ Por favor, leia todos os documentos com atenção e assine os que requerem assinatura.\n"
             "Se tiver dúvidas sobre algum documento, não hesite em perguntar ou contactar os RH."
         )
@@ -170,7 +170,7 @@ class ActionIniciarQuiz(Action):
 
         if int(pontuacao_atual) == 0:
             introducao = (
-                f"📝 Ótimo{nome}! Vamos começar o **Quiz de Conhecimento da Totoslente**!\n\n"
+                f"📝 Ótimo{nome}! Vamos começar o **Quiz de Conhecimento da The100s**!\n\n"
                 f"Este quiz tem **{len(QUIZ_PERGUNTAS)} perguntas** sobre a empresa.\n"
                 "Tente responder com a letra da opção correta (A, B, C ou D).\n\n"
             )
@@ -226,13 +226,13 @@ class ActionVerificarRespostaQuiz(Action):
                 f"Pontuação final: **{int(nova_pontuacao)}/{len(QUIZ_PERGUNTAS)}** ({percentagem:.0f}%)\n\n"
             )
             if percentagem >= 80:
-                resumo += "🌟 Excelente! Tem um ótimo conhecimento sobre a Totoslente!"
+                resumo += "🌟 Excelente! Tem um ótimo conhecimento sobre a The100s!"
             elif percentagem >= 60:
                 resumo += "👍 Bom trabalho! Continue a aprender sobre a empresa."
             else:
                 resumo += (
                     "📚 Recomendamos que leia o Manual do Colaborador para aprofundar "
-                    "o seu conhecimento sobre a Totoslente."
+                    "o seu conhecimento sobre a The100s."
                 )
 
             dispatcher.utter_message(text=feedback + resumo)
@@ -337,7 +337,7 @@ class ActionVerificarEtapaOnboarding(Action):
                 "• 🖥️ Preparar o equipamento necessário"
             ),
             "primeiro_dia": (
-                f"🏢 Olá{nome}! É o seu **Primeiro Dia** na Totoslente!\n\n"
+                f"🏢 Olá{nome}! É o seu **Primeiro Dia** na The100s!\n\n"
                 "**Agenda de hoje:**\n"
                 "• 👋 Apresentações com a equipa\n"
                 "• 🖥️ Configuração do posto de trabalho\n"
@@ -346,7 +346,7 @@ class ActionVerificarEtapaOnboarding(Action):
                 "• 📋 Briefing inicial com o seu gestor"
             ),
             "primeira_semana": (
-                f"📅 Olá{nome}! Está na sua **Primeira Semana** na Totoslente!\n\n"
+                f"📅 Olá{nome}! Está na sua **Primeira Semana** na The100s!\n\n"
                 "**Objetivos desta semana:**\n"
                 "• 🤝 Reuniões de apresentação com as equipas chave\n"
                 "• 📚 Formações iniciais obrigatórias\n"
@@ -359,10 +359,10 @@ class ActionVerificarEtapaOnboarding(Action):
         mensagem = etapas_info.get(
             etapa,
             (
-                f"👋 Olá{nome}! Bem-vindo(a) ao processo de onboarding da Totoslente!\n\n"
+                f"👋 Olá{nome}! Bem-vindo(a) ao processo de onboarding da The100s!\n\n"
                 "Não consegui determinar a sua etapa atual. "
                 "Por favor, contacte os RH para verificar o seu estado de onboarding.\n\n"
-                "📧 **RH:** rh@totoslente.com"
+                "📧 **RH:** rh@the100s.com"
             ),
         )
 

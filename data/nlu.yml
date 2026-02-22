@@ -76,21 +76,21 @@ nlu:
 
   - intent: pedir_info_empresa
     examples: |
-      - o que é a Totoslente?
+      - o que é a The100s?
       - fala-me sobre a empresa
-      - quero saber mais sobre a Totoslente
+      - quero saber mais sobre a The100s
       - como surgiu a empresa?
-      - qual é a história da Totoslente?
+      - qual é a história da The100s?
       - qual é a missão da empresa?
       - quais são os valores da empresa?
-      - o que faz a Totoslente?
+      - o que faz a The100s?
       - informações sobre a empresa
-      - conta-me sobre a Totoslente
+      - conta-me sobre a The100s
       - qual é a visão da empresa?
-      - quem fundou a Totoslente?
+      - quem fundou a The100s?
       - em que setor atua a empresa?
       - quero informações sobre o meu novo empregador
-      - apresenta-me a Totoslente
+      - apresenta-me a The100s
 
   - intent: pedir_info_beneficios
     examples: |

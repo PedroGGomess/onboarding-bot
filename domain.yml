@@ -74,7 +74,7 @@ slots:
 responses:
   utter_saudar:
     - text: |
-        Olá{name}! 👋 Bem-vindo(a) à Totoslente!
+        Olá{name}! 👋 Bem-vindo(a) à The100s!
         Sou o seu assistente virtual de onboarding e estou aqui para o/a ajudar a integrar-se na nossa equipa.
         Posso ajudá-lo/a com informações sobre a empresa, documentos, agendamento de reuniões e muito mais.
         Como posso ajudá-lo/a hoje?
@@ -85,13 +85,13 @@ responses:
     - text: |
         Foi um prazer ajudá-lo/a! 😊
         Se precisar de mais informações, estou sempre disponível.
-        Boa sorte no seu novo percurso na Totoslente! Até breve! 👋
+        Boa sorte no seu novo percurso na The100s! Até breve! 👋
 
   utter_info_empresa:
     - text: |
-        🏢 **Sobre a Totoslente**
+        🏢 **Sobre a The100s**
 
-        A Totoslente é uma empresa dedicada à excelência no seu setor, com um forte foco na inovação e no bem-estar dos seus colaboradores.
+        A The100s é uma empresa dedicada à excelência no seu setor, com um forte foco na inovação e no bem-estar dos seus colaboradores.
 
         **Missão:** Proporcionar soluções de qualidade superior aos nossos clientes, mantendo um ambiente de trabalho positivo e inclusivo.
 
@@ -103,9 +103,9 @@ responses:
 
   utter_info_beneficios:
     - text: |
-        🎁 **Benefícios na Totoslente**
+        🎁 **Benefícios na The100s**
 
-        Como colaborador(a) da Totoslente, tem acesso aos seguintes benefícios:
+        Como colaborador(a) da The100s, tem acesso aos seguintes benefícios:
 
         🏥 **Seguro de Saúde:** Plano de saúde para si e dependentes
         🌴 **Férias:** 22 dias úteis por ano (conforme lei portuguesa)
@@ -122,11 +122,11 @@ responses:
 
         Aqui estão os documentos essenciais para o seu onboarding:
 
-        1. 📋 **Manual do Colaborador** — [Aceder ao Manual](https://totoslente.sharepoint.com/manual-colaborador)
-        2. ⚖️ **Código de Conduta** — [Aceder ao Código de Conduta](https://totoslente.sharepoint.com/codigo-conduta)
+        1. 📋 **Manual do Colaborador** — [Aceder ao Manual](https://the100s.sharepoint.com/manual-colaborador)
+        2. ⚖️ **Código de Conduta** — [Aceder ao Código de Conduta](https://the100s.sharepoint.com/codigo-conduta)
         3. 📝 **Contrato de Trabalho** — Enviado por email para o seu endereço pessoal
-        4. 🔒 **Política de Privacidade e RGPD** — [Aceder à Política](https://totoslente.sharepoint.com/politica-privacidade)
-        5. 🖥️ **Política de Uso de TI** — [Aceder à Política TI](https://totoslente.sharepoint.com/politica-ti)
+        4. 🔒 **Política de Privacidade e RGPD** — [Aceder à Política](https://the100s.sharepoint.com/politica-privacidade)
+        5. 🖥️ **Política de Uso de TI** — [Aceder à Política TI](https://the100s.sharepoint.com/politica-ti)
 
         ⚠️ Por favor, leia todos os documentos com atenção e assine os que requerem assinatura.
 
@@ -136,7 +136,7 @@ responses:
 
         Temos uma mensagem especial de boas-vindas para si!
 
-        👉 [Clique aqui para ver o vídeo de boas-vindas da Totoslente](https://totoslente.sharepoint.com/video-boas-vindas)
+        👉 [Clique aqui para ver o vídeo de boas-vindas da The100s](https://the100s.sharepoint.com/video-boas-vindas)
 
         Este vídeo inclui uma mensagem da liderança e uma introdução à nossa cultura e valores.
         Duração: aproximadamente 10 minutos.
@@ -154,7 +154,7 @@ responses:
         - 🤝 **Buddy de Onboarding:** Um colega experiente irá acompanhá-lo/a nos primeiros dias
 
         📌 Consulte o diretório de colaboradores no SharePoint para conhecer toda a equipa:
-        [Diretório de Colaboradores](https://totoslente.sharepoint.com/pessoas)
+        [Diretório de Colaboradores](https://the100s.sharepoint.com/pessoas)
 
   utter_ajuda_ti:
     - text: |
@@ -163,14 +163,14 @@ responses:
         Precisa de ajuda técnica? Estamos aqui para si!
 
         **Contactos TI:**
-        📧 Email: helpdesk@totoslente.com
+        📧 Email: helpdesk@the100s.com
         📞 Telefone interno: 1234
-        🎫 Portal de Tickets: [https://helpdesk.totoslente.com](https://helpdesk.totoslente.com)
+        🎫 Portal de Tickets: [https://helpdesk.the100s.com](https://helpdesk.the100s.com)
 
         **Problemas comuns:**
         - 🔑 Reset de password: Aceda ao portal ou contacte o helpdesk
-        - 📧 Configuração de email: Siga o guia em [Setup Email](https://totoslente.sharepoint.com/setup-email)
-        - 🔒 Acesso VPN: Guia disponível em [Setup VPN](https://totoslente.sharepoint.com/setup-vpn)
+        - 📧 Configuração de email: Siga o guia em [Setup Email](https://the100s.sharepoint.com/setup-email)
+        - 🔒 Acesso VPN: Guia disponível em [Setup VPN](https://the100s.sharepoint.com/setup-vpn)
         - 💻 Software necessário: Lista disponível no SharePoint
 
         O helpdesk está disponível das **9h às 18h**, dias úteis.
@@ -192,7 +192,7 @@ responses:
         O pagamento é processado no último dia útil de cada mês.
 
         **Tenho dúvidas sobre benefícios, a quem contacto?**
-        Contacte o departamento de RH: rh@totoslente.com
+        Contacte o departamento de RH: rh@the100s.com
 
         Para mais perguntas, fale com o seu gestor ou com os RH!
 
@@ -213,7 +213,7 @@ responses:
         Compreendo que prefere falar diretamente com alguém da equipa.
 
         **Contactos diretos:**
-        📧 **RH:** rh@totoslente.com
+        📧 **RH:** rh@the100s.com
         📞 **Linha de Apoio ao Colaborador:** +351 XXX XXX XXX
         💬 **Microsoft Teams:** Procure por "Equipa de RH" no Teams
 
