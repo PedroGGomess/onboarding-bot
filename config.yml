@@ -1,4 +1,4 @@
-# Configuração do Pipeline NLU do Rasa para o Bot de Onboarding da Totoslente
+# Configuração do Pipeline NLU do Rasa para o Bot de Onboarding da The100s
 # Modelo de linguagem: Português (Portugal)
 
 recipe: default.v1

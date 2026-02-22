@@ -1,6 +1,6 @@
-# 🤖 Bot de Onboarding da Totoslente
+# 🤖 Bot de Onboarding da The100s
 
-Bot de onboarding automático com Inteligência Artificial para a **Totoslente**, desenvolvido com [Rasa](https://rasa.com/) (open-source) e integração com **Microsoft Teams**.
+Bot de onboarding automático com Inteligência Artificial para a **The100s**, desenvolvido com [Rasa](https://rasa.com/) (open-source) e integração com **Microsoft Teams**.
 
 ---
 
@@ -21,12 +21,12 @@ Bot de onboarding automático com Inteligência Artificial para a **Totoslente**
 
 ## 📖 Descrição do Projeto
 
-O **Bot de Onboarding da Totoslente** é um assistente virtual inteligente que automatiza e melhora o processo de integração de novos colaboradores. O bot responde em **Português de Portugal** e guia os novos colaboradores através de todas as etapas do onboarding.
+O **Bot de Onboarding da The100s** é um assistente virtual inteligente que automatiza e melhora o processo de integração de novos colaboradores. O bot responde em **Português de Portugal** e guia os novos colaboradores através de todas as etapas do onboarding.
 
 ### Funcionalidades Principais
 
 - 👋 **Boas-vindas personalizadas** — Saúda o novo colaborador pelo nome
-- 🏢 **Informações da empresa** — Missão, visão, valores e cultura da Totoslente
+- 🏢 **Informações da empresa** — Missão, visão, valores e cultura da The100s
 - 🎁 **Benefícios** — Informações sobre seguro de saúde, férias, subsídios, etc.
 - 📄 **Documentos** — Links para manual do colaborador, código de conduta, contratos
 - 🎬 **Vídeo de boas-vindas** — Acesso ao vídeo institucional de boas-vindas
@@ -203,7 +203,7 @@ curl -X POST http://localhost:5005/webhooks/rest/webhook \
 1. Aceda ao [Portal Azure](https://portal.azure.com)
 2. Clique em **"Criar um recurso"** → pesquise **"Azure Bot"**
 3. Preencha os campos:
-   - **Nome do bot:** `totoslente-onboarding-bot`
+   - **Nome do bot:** `the100s-onboarding-bot`
    - **Subscrição:** Selecione a sua subscrição
    - **Grupo de recursos:** Crie ou selecione um existente
    - **Plano de preços:** F0 (gratuito para desenvolvimento)
@@ -386,12 +386,12 @@ Utilizamos [Conventional Commits](https://www.conventionalcommits.org/):
 
 ## 📜 Licença
 
-Este projeto é propriedade da **Totoslente**. Todos os direitos reservados.
+Este projeto é propriedade da **The100s**. Todos os direitos reservados.
 
 ---
 
 ## 📞 Contacto
 
-Para questões sobre este projeto, contacte a equipa de IT da Totoslente:
-- 📧 Email: it@totoslente.com
+Para questões sobre este projeto, contacte a equipa de IT da The100s:
+- 📧 Email: it@the100s.com
 - 💬 Teams: Equipa de IT

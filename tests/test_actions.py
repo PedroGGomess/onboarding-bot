@@ -1,5 +1,5 @@
 """
-Testes básicos para as custom actions do Bot de Onboarding da Totoslente.
+Testes básicos para as custom actions do Bot de Onboarding da The100s.
 """
 
 from unittest.mock import MagicMock, patch
@@ -88,7 +88,7 @@ def test_boas_vindas_sem_nome():
     dispatcher.utter_message.assert_called_once()
     call_kwargs = dispatcher.utter_message.call_args
     message = call_kwargs[1].get("text") or call_kwargs[0][0]
-    assert "Totoslente" in message
+    assert "The100s" in message
     assert events == []
 
 
@@ -122,7 +122,7 @@ def test_enviar_documentos_contem_links():
     message = call_kwargs[1].get("text") or call_kwargs[0][0]
     assert "Manual do Colaborador" in message
     assert "Código de Conduta" in message
-    assert "totoslente.sharepoint.com" in message
+    assert "the100s.sharepoint.com" in message
 
 
 # ---------------------------------------------------------------------------
