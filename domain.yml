@@ -1,0 +1,252 @@
+version: "3.1"
+
+intents:
+  - saudar
+  - despedir
+  - afirmar
+  - negar
+  - pedir_info_empresa
+  - pedir_info_beneficios
+  - pedir_documentos
+  - pedir_video_boas_vindas
+  - iniciar_quiz
+  - responder_quiz
+  - agendar_reuniao
+  - pedir_ajuda_ti
+  - pedir_apresentacao_equipa
+  - pedir_faq
+  - dar_feedback
+  - falar_com_humano
+
+entities:
+  - nome_colaborador
+  - cargo
+  - departamento
+  - gestor
+  - data_inicio
+  - email_colaborador
+
+slots:
+  nome_colaborador:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nome_colaborador
+  cargo:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: cargo
+  departamento:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: departamento
+  gestor:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: gestor
+  data_inicio:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: data_inicio
+  email_colaborador:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: email_colaborador
+  quiz_pontuacao:
+    type: float
+    initial_value: 0.0
+    mappings:
+      - type: custom
+  etapa_onboarding:
+    type: categorical
+    values:
+      - pre_onboarding
+      - primeiro_dia
+      - primeira_semana
+    mappings:
+      - type: custom
+
+responses:
+  utter_saudar:
+    - text: |
+        Olá{name}! 👋 Bem-vindo(a) à Totoslente!
+        Sou o seu assistente virtual de onboarding e estou aqui para o/a ajudar a integrar-se na nossa equipa.
+        Posso ajudá-lo/a com informações sobre a empresa, documentos, agendamento de reuniões e muito mais.
+        Como posso ajudá-lo/a hoje?
+      custom:
+        name_placeholder: "{nome_colaborador}"
+
+  utter_despedir:
+    - text: |
+        Foi um prazer ajudá-lo/a! 😊
+        Se precisar de mais informações, estou sempre disponível.
+        Boa sorte no seu novo percurso na Totoslente! Até breve! 👋
+
+  utter_info_empresa:
+    - text: |
+        🏢 **Sobre a Totoslente**
+
+        A Totoslente é uma empresa dedicada à excelência no seu setor, com um forte foco na inovação e no bem-estar dos seus colaboradores.
+
+        **Missão:** Proporcionar soluções de qualidade superior aos nossos clientes, mantendo um ambiente de trabalho positivo e inclusivo.
+
+        **Visão:** Ser referência no setor, reconhecida pela qualidade dos nossos produtos/serviços e pelo desenvolvimento dos nossos colaboradores.
+
+        **Valores:** Integridade, Inovação, Excelência, Trabalho em Equipa e Respeito.
+
+        ℹ️ Para mais informações detalhadas, consulte o manual do colaborador ou fale com o seu gestor.
+
+  utter_info_beneficios:
+    - text: |
+        🎁 **Benefícios na Totoslente**
+
+        Como colaborador(a) da Totoslente, tem acesso aos seguintes benefícios:
+
+        🏥 **Seguro de Saúde:** Plano de saúde para si e dependentes
+        🌴 **Férias:** 22 dias úteis por ano (conforme lei portuguesa)
+        🍽️ **Subsídio de Alimentação:** Cartão refeição diário
+        📚 **Formação:** Acesso a programas de formação e desenvolvimento profissional
+        🚗 **Mobilidade:** Apoio à mobilidade (conforme cargo)
+        💻 **Equipamento:** Computador portátil e telemóvel (conforme cargo)
+
+        Para mais detalhes, consulte o manual do colaborador ou contacte o departamento de RH.
+
+  utter_documentos:
+    - text: |
+        📄 **Documentos Importantes**
+
+        Aqui estão os documentos essenciais para o seu onboarding:
+
+        1. 📋 **Manual do Colaborador** — [Aceder ao Manual](https://totoslente.sharepoint.com/manual-colaborador)
+        2. ⚖️ **Código de Conduta** — [Aceder ao Código de Conduta](https://totoslente.sharepoint.com/codigo-conduta)
+        3. 📝 **Contrato de Trabalho** — Enviado por email para o seu endereço pessoal
+        4. 🔒 **Política de Privacidade e RGPD** — [Aceder à Política](https://totoslente.sharepoint.com/politica-privacidade)
+        5. 🖥️ **Política de Uso de TI** — [Aceder à Política TI](https://totoslente.sharepoint.com/politica-ti)
+
+        ⚠️ Por favor, leia todos os documentos com atenção e assine os que requerem assinatura.
+
+  utter_video_boas_vindas:
+    - text: |
+        🎬 **Vídeo de Boas-Vindas**
+
+        Temos uma mensagem especial de boas-vindas para si!
+
+        👉 [Clique aqui para ver o vídeo de boas-vindas da Totoslente](https://totoslente.sharepoint.com/video-boas-vindas)
+
+        Este vídeo inclui uma mensagem da liderança e uma introdução à nossa cultura e valores.
+        Duração: aproximadamente 10 minutos.
+
+        Esperamos que goste! 🎉
+
+  utter_apresentacao_equipa:
+    - text: |
+        👥 **A Sua Equipa**
+
+        É sempre bom conhecer os colegas! Aqui fica uma breve apresentação da sua equipa:
+
+        - 📊 **Direção:** Pode consultar o organigrama completo no SharePoint
+        - 👤 **O seu Gestor:** Será contactado em breve para marcar uma reunião de acolhimento
+        - 🤝 **Buddy de Onboarding:** Um colega experiente irá acompanhá-lo/a nos primeiros dias
+
+        📌 Consulte o diretório de colaboradores no SharePoint para conhecer toda a equipa:
+        [Diretório de Colaboradores](https://totoslente.sharepoint.com/pessoas)
+
+  utter_ajuda_ti:
+    - text: |
+        🖥️ **Suporte de Tecnologias de Informação (TI)**
+
+        Precisa de ajuda técnica? Estamos aqui para si!
+
+        **Contactos TI:**
+        📧 Email: helpdesk@totoslente.com
+        📞 Telefone interno: 1234
+        🎫 Portal de Tickets: [https://helpdesk.totoslente.com](https://helpdesk.totoslente.com)
+
+        **Problemas comuns:**
+        - 🔑 Reset de password: Aceda ao portal ou contacte o helpdesk
+        - 📧 Configuração de email: Siga o guia em [Setup Email](https://totoslente.sharepoint.com/setup-email)
+        - 🔒 Acesso VPN: Guia disponível em [Setup VPN](https://totoslente.sharepoint.com/setup-vpn)
+        - 💻 Software necessário: Lista disponível no SharePoint
+
+        O helpdesk está disponível das **9h às 18h**, dias úteis.
+
+  utter_faq:
+    - text: |
+        ❓ **Perguntas Frequentes (FAQ)**
+
+        **Horário de trabalho:**
+        O horário padrão é das 9h às 18h, com flexibilidade conforme acordado com o seu gestor.
+
+        **Onde fico?**
+        O seu posto de trabalho está identificado. Consulte o seu gestor ou RH para confirmação.
+
+        **Como funciona o registo de ponto?**
+        Através do sistema de RH (SIRH). Receberá as credenciais por email.
+
+        **Quando recebo o primeiro salário?**
+        O pagamento é processado no último dia útil de cada mês.
+
+        **Tenho dúvidas sobre benefícios, a quem contacto?**
+        Contacte o departamento de RH: rh@totoslente.com
+
+        Para mais perguntas, fale com o seu gestor ou com os RH!
+
+  utter_feedback_obrigado:
+    - text: |
+        🙏 **Obrigado pelo seu feedback!**
+
+        O seu feedback é muito importante para nós melhorarmos o processo de onboarding.
+
+        As suas respostas foram registadas e serão analisadas pela equipa de RH.
+
+        Se tiver mais comentários ou sugestões, não hesite em partilhar! 😊
+
+  utter_direcionar_humano:
+    - text: |
+        👤 **Vou conectá-lo/a com um colega humano!**
+
+        Compreendo que prefere falar diretamente com alguém da equipa.
+
+        **Contactos diretos:**
+        📧 **RH:** rh@totoslente.com
+        📞 **Linha de Apoio ao Colaborador:** +351 XXX XXX XXX
+        💬 **Microsoft Teams:** Procure por "Equipa de RH" no Teams
+
+        Um membro da equipa irá responder-lhe dentro de **1 hora útil**.
+
+        Se for urgente, ligue diretamente para a linha de apoio. 📞
+
+  utter_default:
+    - text: |
+        🤔 Desculpe, não percebi bem o que quis dizer.
+
+        Posso ajudá-lo/a com:
+        • 🏢 Informações sobre a empresa
+        • 🎁 Benefícios
+        • 📄 Documentos de onboarding
+        • 🎬 Vídeo de boas-vindas
+        • 📝 Quiz de conhecimento
+        • 📅 Agendamento de reuniões
+        • 🖥️ Suporte TI
+        • ❓ Perguntas frequentes
+        • 💬 Falar com alguém da equipa
+
+        Como posso ajudá-lo/a?
+
+actions:
+  - action_boas_vindas_personalizada
+  - action_enviar_documentos
+  - action_iniciar_quiz
+  - action_verificar_resposta_quiz
+  - action_agendar_reuniao
+  - action_registar_feedback
+  - action_verificar_etapa_onboarding
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

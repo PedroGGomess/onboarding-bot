@@ -1,0 +1,291 @@
+version: "3.1"
+
+nlu:
+  - intent: saudar
+    examples: |
+      - olá
+      - olá, bom dia
+      - bom dia
+      - boa tarde
+      - boa noite
+      - oi
+      - olá!
+      - boas
+      - olá, tudo bem?
+      - bom dia, como estás?
+      - olá, estou aqui
+      - ei, olá
+      - cumprimentos
+      - saudações
+      - muito bom dia
+      - boa tarde, tudo bem?
+
+  - intent: despedir
+    examples: |
+      - adeus
+      - até logo
+      - tchau
+      - até amanhã
+      - boa tarde, até logo
+      - até já
+      - até breve
+      - vemo-nos
+      - boa noite, adeus
+      - tenho de ir
+      - até à próxima
+      - foi um prazer
+      - obrigado, adeus
+      - boa sorte, tchau
+      - até mais
+
+  - intent: afirmar
+    examples: |
+      - sim
+      - claro
+      - correto
+      - exatamente
+      - sim, por favor
+      - com certeza
+      - concordo
+      - de acordo
+      - certo
+      - ok
+      - ótimo
+      - perfeito
+      - tudo bem
+      - sim, obrigado
+      - claro que sim
+
+  - intent: negar
+    examples: |
+      - não
+      - negativo
+      - de jeito nenhum
+      - não, obrigado
+      - não quero
+      - não é isso
+      - discordo
+      - não concordo
+      - não, não quero
+      - errado
+      - de forma alguma
+      - nunca
+      - não mesmo
+      - não, está bem
+      - não necessito
+
+  - intent: pedir_info_empresa
+    examples: |
+      - o que é a Totoslente?
+      - fala-me sobre a empresa
+      - quero saber mais sobre a Totoslente
+      - como surgiu a empresa?
+      - qual é a história da Totoslente?
+      - qual é a missão da empresa?
+      - quais são os valores da empresa?
+      - o que faz a Totoslente?
+      - informações sobre a empresa
+      - conta-me sobre a Totoslente
+      - qual é a visão da empresa?
+      - quem fundou a Totoslente?
+      - em que setor atua a empresa?
+      - quero informações sobre o meu novo empregador
+      - apresenta-me a Totoslente
+
+  - intent: pedir_info_beneficios
+    examples: |
+      - quais são os meus benefícios?
+      - que benefícios tenho?
+      - fala-me sobre o seguro de saúde
+      - quantos dias de férias tenho?
+      - tenho subsídio de refeição?
+      - quais são os benefícios dos colaboradores?
+      - tenho direito a seguro?
+      - como funciona o subsídio de alimentação?
+      - que regalias tenho como colaborador?
+      - existe plano de formação?
+      - tenho direito a equipamento da empresa?
+      - quais os benefícios que a empresa oferece?
+      - informações sobre férias
+      - fala-me dos benefícios sociais
+      - tenho direito a telemóvel da empresa?
+
+  - intent: pedir_documentos
+    examples: |
+      - preciso do manual do colaborador
+      - onde está o código de conduta?
+      - quero aceder aos documentos de onboarding
+      - como acedo ao meu contrato?
+      - onde posso encontrar as políticas da empresa?
+      - preciso de assinar documentos
+      - quais são os documentos que tenho de ler?
+      - envia-me os documentos importantes
+      - documentos de integração
+      - preciso da política de privacidade
+      - onde está a política de TI?
+      - quero aceder ao SharePoint
+      - documentos para novos colaboradores
+      - preciso do manual
+      - que documentos tenho de assinar?
+
+  - intent: pedir_video_boas_vindas
+    examples: |
+      - quero ver o vídeo de boas-vindas
+      - existe um vídeo de apresentação?
+      - onde posso ver o vídeo de boas-vindas?
+      - quero a mensagem de boas-vindas
+      - como acedo ao vídeo da empresa?
+      - tem um vídeo introdutório?
+      - quero ver a mensagem da liderança
+      - vídeo de onboarding
+      - mostrar vídeo de boas-vindas
+      - existe um vídeo de introdução?
+      - quero conhecer a empresa através de um vídeo
+      - tem vídeo institucional?
+      - link do vídeo de boas-vindas
+      - ver vídeo da empresa
+      - mensagem em vídeo
+
+  - intent: iniciar_quiz
+    examples: |
+      - quero fazer o quiz
+      - iniciar o teste de conhecimento
+      - vamos ao quiz!
+      - quero ser testado
+      - fazer o questionário sobre a empresa
+      - quiz de onboarding
+      - testar os meus conhecimentos
+      - estou pronto para o quiz
+      - iniciar questionário
+      - quero fazer o teste
+      - quiz da empresa
+      - quero responder ao quiz
+      - vamos fazer o teste de conhecimento
+      - pronto para o quiz
+      - começar o quiz
+
+  - intent: responder_quiz
+    examples: |
+      - a resposta é A
+      - escolho a opção B
+      - a minha resposta é C
+      - resposta: Lisboa
+      - a resposta correta é a primeira
+      - escolho a segunda opção
+      - diria que é 1998
+      - a resposta é sim
+      - é a terceira opção
+      - escolho a quarta
+      - a minha escolha é B
+      - resposta A
+      - é a opção 1
+      - escolho a resposta 2
+      - diria que é a resposta 3
+
+  - intent: agendar_reuniao
+    examples: |
+      - quero agendar uma reunião com o meu gestor
+      - marcar reunião de apresentação
+      - como agendar uma reunião com a equipa?
+      - quero marcar uma reunião
+      - preciso de marcar uma reunião com o meu chefe
+      - agendar reunião de onboarding
+      - como marco uma reunião?
+      - quero falar com o meu gestor
+      - marcar encontro com a equipa
+      - agendar reunião de integração
+      - quero conhecer pessoalmente o meu gestor
+      - reunião de boas-vindas
+      - como posso marcar uma reunião?
+      - agenda uma reunião para mim
+      - quero reunir com o meu departamento
+
+  - intent: pedir_ajuda_ti
+    examples: |
+      - tenho um problema com o computador
+      - o meu email não funciona
+      - preciso de ajuda com TI
+      - como configuro o email da empresa?
+      - não consigo aceder ao email
+      - problemas com VPN
+      - não consigo instalar o software
+      - suporte técnico, por favor
+      - o meu computador não liga
+      - problema com a password
+      - como acedo ao Teams?
+      - helpdesk TI
+      - preciso de instalar um programa
+      - não consigo entrar no sistema
+      - problema com as credenciais
+
+  - intent: pedir_apresentacao_equipa
+    examples: |
+      - quero conhecer a minha equipa
+      - quem são os meus colegas?
+      - apresenta-me a equipa
+      - quem trabalha no meu departamento?
+      - como posso conhecer os meus colegas?
+      - quero saber quem é o meu gestor
+      - organigrama da empresa
+      - quem faz parte da equipa?
+      - apresentação da equipa
+      - quero ver o organigrama
+      - quem são as pessoas com quem vou trabalhar?
+      - diretório de colaboradores
+      - como contacto os meus colegas?
+      - quero conhecer toda a equipa
+      - quem é o meu buddy de onboarding?
+
+  - intent: pedir_faq
+    examples: |
+      - tenho uma pergunta
+      - perguntas frequentes
+      - tenho dúvidas
+      - o que preciso saber?
+      - quais as perguntas mais comuns?
+      - tenho uma dúvida sobre o horário
+      - como funciona o registo de ponto?
+      - quando recebo o salário?
+      - qual é o horário de trabalho?
+      - tenho dúvidas sobre o processo
+      - onde fica o meu posto de trabalho?
+      - como funciona o sistema de avaliação?
+      - dúvidas gerais sobre o trabalho
+      - FAQ do onboarding
+      - tenho perguntas sobre os primeiros dias
+
+  - intent: dar_feedback
+    examples: |
+      - quero dar feedback
+      - tenho um comentário
+      - quero avaliar o onboarding
+      - feedback sobre o processo de integração
+      - tenho sugestões de melhoria
+      - quero dar a minha opinião
+      - avaliar o bot de onboarding
+      - comentários sobre a minha experiência
+      - quero partilhar a minha opinião
+      - dar feedback sobre o processo
+      - tenho uma sugestão
+      - quero comentar sobre o onboarding
+      - a minha experiência de onboarding
+      - submeter feedback
+      - quero avaliar a experiência
+
+  - intent: falar_com_humano
+    examples: |
+      - quero falar com uma pessoa
+      - preciso de apoio humano
+      - falar com alguém dos RH
+      - preciso de ajuda de uma pessoa real
+      - contactar os recursos humanos
+      - quero falar com o meu gestor
+      - transferir para um humano
+      - preciso de falar com alguém
+      - quero suporte humano
+      - falar com um colaborador dos RH
+      - não quero falar com um bot
+      - preciso de ajuda de alguém real
+      - conectar com suporte
+      - falar com RH
+      - preciso de falar com uma pessoa de verdade

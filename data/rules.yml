@@ -1,0 +1,42 @@
+version: "3.1"
+
+rules:
+  - rule: Responder saudação
+    steps:
+      - intent: saudar
+      - action: action_boas_vindas_personalizada
+
+  - rule: Responder despedida
+    steps:
+      - intent: despedir
+      - action: utter_despedir
+
+  - rule: Mensagem de fallback
+    steps:
+      - intent: nlu_fallback
+      - action: utter_default
+
+  - rule: Direcionar para humano
+    steps:
+      - intent: falar_com_humano
+      - action: utter_direcionar_humano
+
+  - rule: Responder pedido de FAQ
+    steps:
+      - intent: pedir_faq
+      - action: utter_faq
+
+  - rule: Responder pedido de suporte TI
+    steps:
+      - intent: pedir_ajuda_ti
+      - action: utter_ajuda_ti
+
+  - rule: Responder pedido de informações sobre benefícios
+    steps:
+      - intent: pedir_info_beneficios
+      - action: utter_info_beneficios
+
+  - rule: Responder pedido de vídeo de boas-vindas
+    steps:
+      - intent: pedir_video_boas_vindas
+      - action: utter_video_boas_vindas
