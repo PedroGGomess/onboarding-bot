@@ -1,0 +1,118 @@
+version: "3.1"
+
+stories:
+  - story: fluxo de boas-vindas e apresentação
+    steps:
+      - intent: saudar
+      - action: action_boas_vindas_personalizada
+      - intent: pedir_apresentacao_equipa
+      - action: utter_apresentacao_equipa
+
+  - story: fluxo de informações da empresa
+    steps:
+      - intent: saudar
+      - action: action_boas_vindas_personalizada
+      - intent: pedir_info_empresa
+      - action: utter_info_empresa
+
+  - story: fluxo de benefícios
+    steps:
+      - intent: pedir_info_beneficios
+      - action: utter_info_beneficios
+
+  - story: fluxo de documentos
+    steps:
+      - intent: pedir_documentos
+      - action: action_enviar_documentos
+
+  - story: fluxo de vídeo de boas-vindas
+    steps:
+      - intent: pedir_video_boas_vindas
+      - action: utter_video_boas_vindas
+
+  - story: fluxo de quiz - sucesso
+    steps:
+      - intent: iniciar_quiz
+      - action: action_iniciar_quiz
+      - intent: responder_quiz
+      - action: action_verificar_resposta_quiz
+      - intent: afirmar
+      - action: action_iniciar_quiz
+
+  - story: fluxo de quiz - desistência
+    steps:
+      - intent: iniciar_quiz
+      - action: action_iniciar_quiz
+      - intent: negar
+      - action: utter_default
+
+  - story: fluxo de agendamento de reunião
+    steps:
+      - intent: agendar_reuniao
+      - action: action_agendar_reuniao
+
+  - story: fluxo de suporte TI
+    steps:
+      - intent: pedir_ajuda_ti
+      - action: utter_ajuda_ti
+
+  - story: fluxo de FAQ
+    steps:
+      - intent: pedir_faq
+      - action: utter_faq
+
+  - story: fluxo de feedback
+    steps:
+      - intent: dar_feedback
+      - action: action_registar_feedback
+      - action: utter_feedback_obrigado
+
+  - story: fluxo de direcionamento para humano
+    steps:
+      - intent: falar_com_humano
+      - action: utter_direcionar_humano
+
+  - story: fluxo de despedida
+    steps:
+      - intent: despedir
+      - action: utter_despedir
+
+  - story: fluxo de boas-vindas seguido de documentos
+    steps:
+      - intent: saudar
+      - action: action_boas_vindas_personalizada
+      - intent: pedir_documentos
+      - action: action_enviar_documentos
+
+  - story: fluxo de boas-vindas seguido de FAQ
+    steps:
+      - intent: saudar
+      - action: action_boas_vindas_personalizada
+      - intent: pedir_faq
+      - action: utter_faq
+
+  - story: fluxo completo de onboarding
+    steps:
+      - intent: saudar
+      - action: action_boas_vindas_personalizada
+      - intent: pedir_info_empresa
+      - action: utter_info_empresa
+      - intent: pedir_documentos
+      - action: action_enviar_documentos
+      - intent: iniciar_quiz
+      - action: action_iniciar_quiz
+      - intent: responder_quiz
+      - action: action_verificar_resposta_quiz
+      - intent: agendar_reuniao
+      - action: action_agendar_reuniao
+      - intent: dar_feedback
+      - action: action_registar_feedback
+      - action: utter_feedback_obrigado
+      - intent: despedir
+      - action: utter_despedir
+
+  - story: fluxo de verificação de etapa de onboarding
+    steps:
+      - intent: saudar
+      - action: action_verificar_etapa_onboarding
+      - action: action_boas_vindas_personalizada

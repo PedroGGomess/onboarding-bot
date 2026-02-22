@@ -1,0 +1,41 @@
+# Dependências Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Credenciais (NUNCA commitar!)
+.env
+
+# Modelos treinados do Rasa (ficheiros pesados)
+models/
+
+# Ficheiros internos do Rasa
+.rasa/
+
+# IDE e editores
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Docker volumes e dados locais
+postgres_data/
+
+# Ficheiros temporários
+tmp/
+temp/

@@ -1,0 +1,25 @@
+# Endpoints do Rasa
+
+# Action Server
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+# Tracker Store — PostgreSQL
+tracker_store:
+  type: SQL
+  dialect: "postgresql"
+  url: ${DB_HOST}
+  port: ${DB_PORT}
+  db: ${DB_NAME}
+  username: ${DB_USER}
+  password: ${DB_PASSWORD}
+  login_db: ${DB_NAME}
+
+# Event Broker (opcional — para análise de conversas)
+# event_broker:
+#   type: pika
+#   url: localhost
+#   username: guest
+#   password: guest
+#   queues:
+#     - rasa_core_events
